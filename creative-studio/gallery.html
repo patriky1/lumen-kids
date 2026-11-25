@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Printables Gallery — Lumen Kids</title>
+  <meta name="description" content="Ready-made color-by-number pages to print.">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" href="../assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Andika&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Geist:wght@400;500;600&family=Libre+Bodoni:wght@400;600;700&family=Noto+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../creative-studio/studio.css">
+  <link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body data-root="../" data-tool="daily">
+<main id="main" class="studio-main">
+  <div class="container">
+    <div class="tool-top studio-hero">
+      <a class="back-link" href="index.html"><svg><use href="#i-back"/></svg>Creative Studio</a>
+      <p class="eyebrow-caps">Nothing to set up</p>
+      <h1 class="studio-title">Printables <em>Gallery</em></h1>
+      <p class="studio-sub">Ready-made color-by-number pages. Pick one, then print or download it.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filter by math mode"><button class="filter" type="button">All</button><button class="filter" type="button">Numbers</button><button class="filter" type="button">Addition</button><button class="filter" type="button">Subtraction</button></div>
+    <p class="count" id="count" aria-live="polite"></p>
+    <ul class="tiles" id="tiles" aria-label="Printables"></ul>
+    <div class="narrow-col">
+      <section class="card soon-card make-own">
+        <span class="icon-ring-lg"><svg><use href="#i-sparkle"/></svg></span>
+        <div><p class="kicker-sm">Creative Studio</p><h2>Make your own</h2><p>Turn your child’s idea into a coloring page with numbers, sums or differences.</p></div>
+        <a class="btn btn-ghost" href="color-by-number.html">Make your own<svg class="ic"><use href="#i-arrow"/></svg></a>
+      </section>
+    </div>
+  </div>
+  <dialog class="studio-dialog" id="daily-dialog" aria-label="Printable preview">
+    <h2></h2><p></p>
+    <div class="dialog-sheet"></div>
+    <div class="dialog-actions">
+      <button class="btn btn-ghost" type="button" data-close>Close</button>
+      <button class="btn btn-ghost" type="button" data-dl><svg class="ic"><use href="#i-download"/></svg>Download</button>
+      <button class="btn btn-primary" type="button" data-pr><svg class="ic"><use href="#i-printer"/></svg>Print</button>
+    </div>
+  </dialog>
+  <div data-slot="app-cta"></div>
+</main>
+<script src="../assets/js/layout.js"></script>
+<script src="../creative-studio/data.js"></script>
+<script src="../creative-studio/tools.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Color by Number — Lumen Kids</title>
+  <meta name="description" content="Turn an idea into a numbered coloring page.">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" href="../assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Andika&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Geist:wght@400;500;600&family=Libre+Bodoni:wght@400;600;700&family=Noto+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../creative-studio/studio.css">
+  <link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body data-root="../" data-tool="color-by-number">
+<main id="main" class="studio-main">
+  <div class="container">
+    <div class="tool-top studio-hero">
+      <a class="back-link" href="index.html"><svg><use href="#i-back"/></svg>Creative Studio</a>
+      <p class="eyebrow-caps eyebrow-lines">Count it. Color it.</p>
+      <h1 class="studio-title">Color by <em>number</em></h1>
+      <p class="studio-sub">Pick an idea and turn it into a numbered coloring page.</p>
+    </div>
+    <div class="tool-layout">
+      <form class="tool-form reveal" onsubmit="return false">
+        <div class="form-head"><span class="icon-ring-lg"><svg><use href="#i-wand"/></svg></span><div><p class="kicker-sm">The coloring table</p><h2>What should we color?</h2></div></div>
+        <div class="field">
+          <label for="topic">Start with an idea</label>
+          <div class="textarea-wrap"><textarea id="topic" class="textarea" maxlength="500" placeholder="A rocket zooming past the moon…"></textarea><span class="counter"></span></div>
+          <p class="hint">Try animals, places, food, or the night sky.</p>
+        </div>
+        <div class="field"><span class="label">Try an idea</span><div class="chips" id="ideas"></div></div>
+        <fieldset class="field fieldset">
+          <legend class="label">Add a little math</legend>
+          <div class="choices "><label class="choice"><input type="radio" name="mode" value="numbers" checked><span><b>123</b>Numbers</span></label><label class="choice"><input type="radio" name="mode" value="addition"><span><b>+</b>Addition</span></label><label class="choice"><input type="radio" name="mode" value="subtraction"><span><b>−</b>Subtraction</span></label></div>
+          <p class="hint" id="mode-hint"></p>
+        </fieldset>
+        <fieldset class="field fieldset">
+          <legend class="label">How many colors?</legend>
+          <div class="choices "><label class="choice"><input type="radio" name="complexity" value="simple"><span><span class="dots-row"><i style="background:#e45b4f"></i><i style="background:#f3c64f"></i><i style="background:#4f8fd8"></i></span>Simple</span></label><label class="choice"><input type="radio" name="complexity" value="standard" checked><span><span class="dots-row"><i style="background:#e45b4f"></i><i style="background:#f39a3d"></i><i style="background:#f3c64f"></i><i style="background:#5fb26b"></i><i style="background:#4f8fd8"></i></span>Standard</span></label><label class="choice"><input type="radio" name="complexity" value="detailed"><span><span class="dots-row"><i style="background:#8f2a24"></i><i style="background:#e45b4f"></i><i style="background:#f6b2aa"></i><i style="background:#f3c64f"></i><i style="background:#5fb26b"></i><i style="background:#4f8fd8"></i></span>Detailed</span></label></div>
+          <p class="hint" id="complexity-hint"></p>
+        </fieldset>
+        <button class="btn btn-primary btn-create" id="create" type="button" disabled><svg><use href="#i-sparkle"/></svg>Create my coloring page<svg><use href="#i-arrow"/></svg></button>
+        <p class="hint warn" role="alert" hidden></p>
+        <p class="offline-note"><b>Good to know.</b> Your idea picks one of six pixel pictures (tree, house, fish, flower, heart or rocket), then we number every square.</p>
+      </form>
+      <aside class="preview card reveal" aria-live="polite">
+        <div class="preview-head"><span>Preview</span><svg><use href="#i-star4"/></svg></div>
+        <div class="sheet-stage"><div class="sheet" data-sample="pic-tree"></div></div>
+        <p class="preview-caption">A little evergreen to start. What will yours be?</p>
+        <p class="preview-note"><svg><use href="#i-printer"/></svg>Prints on Letter paper, with a colored preview</p>
+        <div class="sheet-actions" hidden>
+          <button class="btn btn-primary" data-print type="button"><svg class="ic"><use href="#i-printer"/></svg>Print</button>
+          <button class="btn btn-ghost" data-download type="button"><svg class="ic"><use href="#i-download"/></svg>Download</button>
+          
+        </div>
+      </aside>
+    </div>
+  </div>
+  <div data-slot="app-cta"></div>
+</main>
+<script src="../assets/js/layout.js"></script>
+<script src="../creative-studio/data.js"></script>
+<script src="../creative-studio/tools.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Name Tracing — Lumen Kids</title>
+  <meta name="description" content="A name tracing sheet for your child.">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" href="../assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Andika&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Geist:wght@400;500;600&family=Libre+Bodoni:wght@400;600;700&family=Noto+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../creative-studio/studio.css">
+  <link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body data-root="../" data-tool="name-tracing">
+<main id="main" class="studio-main">
+  <div class="container">
+    <div class="tool-top studio-hero">
+      <a class="back-link" href="index.html"><svg><use href="#i-back"/></svg>Creative Studio</a>
+      <p class="eyebrow-caps eyebrow-lines">Trace it, then write it.</p>
+      <h1 class="studio-title">Name <em>tracing</em></h1>
+      <p class="studio-sub">Type a name. Each row asks your child to write a little more on their own.</p>
+    </div>
+    <div class="tool-layout">
+      <form class="tool-form reveal" onsubmit="return false">
+        <div class="form-head"><span class="icon-ring-lg"><svg><use href="#i-pen"/></svg></span><div><p class="kicker-sm">The pencil case</p><h2>Whose name are we practicing?</h2></div></div>
+        <div class="field">
+          <label for="child-name">Child’s first name</label>
+          <input id="child-name" class="input" maxlength="16" autocomplete="off" placeholder="Ava">
+          <p class="hint">Type it the way they write it. Accents, hyphens and apostrophes all work.</p>
+        </div>
+        <fieldset class="field fieldset">
+          <legend class="label">Letter size</legend>
+          <div class="choices two"><label class="choice"><input type="radio" name="size" value="big" checked><span><b>Aa</b>Big · Pre-K</span></label><label class="choice"><input type="radio" name="size" value="regular"><span><b class="small-aa">Aa</b>Regular · K–1</span></label></div>
+          <p class="hint" id="size-hint"></p>
+        </fieldset>
+        <button class="btn btn-primary btn-create" id="create" type="button" disabled><svg><use href="#i-sparkle"/></svg>Make my tracing sheet<svg><use href="#i-arrow"/></svg></button>
+        <p class="hint warn" role="alert" hidden></p>
+        <p class="offline-note"><b>Good to know.</b> Names never leave your device. The sheet is drawn right in your browser as you type.</p>
+      </form>
+      <aside class="preview card reveal" aria-live="polite">
+        <div class="preview-head"><span>Preview</span><svg><use href="#i-star4"/></svg></div>
+        <div class="sheet-stage"><div class="sheet"></div></div>
+        <p class="preview-caption">Type a name to see their sheet.</p>
+        <p class="preview-note"><svg><use href="#i-printer"/></svg>Prints on Letter paper, with room to practice</p>
+        <div class="sheet-actions" hidden>
+          <button class="btn btn-primary" data-print type="button"><svg class="ic"><use href="#i-printer"/></svg>Print</button>
+          <button class="btn btn-ghost" data-download type="button"><svg class="ic"><use href="#i-download"/></svg>Download</button>
+          
+        </div>
+      </aside>
+    </div>
+  </div>
+  <div data-slot="app-cta"></div>
+</main>
+<script src="../assets/js/layout.js"></script>
+<script src="../creative-studio/data.js"></script>
+<script src="../creative-studio/tools.js"></script>
+</body>
+</html>

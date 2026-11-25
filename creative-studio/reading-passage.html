@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reading Passage — Lumen Kids</title>
+  <meta name="description" content="A short nonfiction page with questions to talk about.">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" href="../assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Andika&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Geist:wght@400;500;600&family=Libre+Bodoni:wght@400;600;700&family=Noto+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../creative-studio/studio.css">
+  <link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body data-root="../" data-tool="reading-passage">
+<main id="main" class="studio-main">
+  <div class="container">
+    <div class="tool-top studio-hero">
+      <a class="back-link" href="index.html"><svg><use href="#i-back"/></svg>Creative Studio</a>
+      <p class="eyebrow-caps eyebrow-lines">Read. Wonder. Talk.</p>
+      <h1 class="studio-title">Reading <em>passage</em></h1>
+      <p class="studio-sub">A short nonfiction page with questions to talk about afterwards.</p>
+    </div>
+    <div class="tool-layout">
+      <form class="tool-form reveal" onsubmit="return false">
+        <div class="form-head"><span class="icon-ring-lg"><svg><use href="#i-book"/></svg></span><div><p class="kicker-sm">The reading nook</p><h2>What should we read about?</h2></div></div>
+        <div class="field">
+          <label for="topic">Choose a topic</label>
+          <div class="textarea-wrap"><textarea id="topic" class="textarea" maxlength="500" placeholder="Rainforests, volcanoes, pyramids…"></textarea><span class="counter"></span></div>
+          <p class="hint">Pick one of the topics below.</p>
+        </div>
+        <div class="field"><span class="label">Try an idea</span><div class="chips" id="ideas"></div></div>
+        <div class="field">
+          <label for="grade">Who is it for?</label>
+          <p class="hint hint-above">Type size and spacing follow the grade you choose.</p>
+          <select id="grade" class="select"></select>
+        </div>
+        <button class="btn btn-primary btn-create" id="create" type="button" disabled><svg><use href="#i-sparkle"/></svg>Create my reading passage<svg><use href="#i-arrow"/></svg></button>
+        <p class="hint warn" role="alert" hidden></p>
+        <p class="offline-note"><b>Good to know.</b> Passages are ready for six topics today: rainforests, butterflies, pyramids, volcanoes, ocean animals and the solar system.</p>
+      </form>
+      <aside class="preview card reveal" aria-live="polite">
+        <div class="preview-head"><span>Preview</span><svg><use href="#i-star4"/></svg></div>
+        <div class="sheet-stage"><div class="sheet" data-sample="reading-passage"></div></div>
+        <p class="preview-caption">Life in the ocean, ready to read together.</p>
+        <p class="preview-note"><svg><use href="#i-printer"/></svg>One page, ready to print or download</p>
+        <div class="sheet-actions" hidden>
+          <button class="btn btn-primary" data-print type="button"><svg class="ic"><use href="#i-printer"/></svg>Print</button>
+          <button class="btn btn-ghost" data-download type="button"><svg class="ic"><use href="#i-download"/></svg>Download</button>
+          
+        </div>
+      </aside>
+    </div>
+  </div>
+  <div data-slot="app-cta"></div>
+</main>
+<script src="../assets/js/layout.js"></script>
+<script src="../creative-studio/data.js"></script>
+<script src="../creative-studio/tools.js"></script>
+</body>
+</html>

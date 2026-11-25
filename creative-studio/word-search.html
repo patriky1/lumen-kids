@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Word Search — Lumen Kids</title>
+  <meta name="description" content="Make a printable word search for any grade.">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" href="../assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Andika&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Geist:wght@400;500;600&family=Libre+Bodoni:wght@400;600;700&family=Noto+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../creative-studio/studio.css">
+  <link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body data-root="../" data-tool="word-search">
+<main id="main" class="studio-main">
+  <div class="container">
+    <div class="tool-top studio-hero">
+      <a class="back-link" href="index.html"><svg><use href="#i-back"/></svg>Creative Studio</a>
+      <p class="eyebrow-caps eyebrow-lines">Find every hidden word.</p>
+      <h1 class="studio-title">Word <em>search</em></h1>
+      <p class="studio-sub">Choose a topic and grade. We’ll hide the words.</p>
+    </div>
+    <div class="tool-layout">
+      <form class="tool-form reveal" onsubmit="return false">
+        <div class="form-head"><span class="icon-ring-lg"><svg><use href="#i-search"/></svg></span><div><p class="kicker-sm">The puzzle desk</p><h2>What should we search for?</h2></div></div>
+        <div class="field">
+          <label for="topic">Choose a topic</label>
+          <div class="textarea-wrap"><textarea id="topic" class="textarea" maxlength="500" placeholder="Ocean animals, the solar system, pirates…"></textarea><span class="counter"></span></div>
+          <p class="hint">Pick a suggested topic, or type your own list: cat, dog, fish.</p>
+        </div>
+        <div class="field"><span class="label">Try an idea</span><div class="chips" id="ideas"></div></div>
+        <div class="field">
+          <label for="grade">Who is it for?</label>
+          <select id="grade" class="select"></select>
+          <p class="hint" id="level-hint"></p>
+        </div>
+        <fieldset class="field fieldset">
+          <legend class="label">How tricky?</legend>
+          <div class="choices "><label class="choice"><input type="radio" name="tricky" value="easy" checked><span><b>→↓</b>Easy</span></label><label class="choice"><input type="radio" name="tricky" value="medium"><span><b>↗↘</b>Medium</span></label><label class="choice"><input type="radio" name="tricky" value="hard"><span><b>✣</b>Hard</span></label></div>
+          <p class="hint" id="dir-hint"></p>
+        </fieldset>
+        <button class="btn btn-primary btn-create" id="create" type="button" disabled><svg><use href="#i-sparkle"/></svg>Create my word search<svg><use href="#i-arrow"/></svg></button>
+        <p class="hint warn" role="alert" hidden></p>
+        <p class="offline-note"><b>Good to know.</b> Suggested topics come with ready word lists. For anything else, type your own words separated by commas.</p>
+      </form>
+      <aside class="preview card reveal" aria-live="polite">
+        <div class="preview-head"><span>Preview</span><svg><use href="#i-star4"/></svg></div>
+        <div class="sheet-stage"><div class="sheet" data-sample="word-search"></div><div class="key-thumb" data-sample="word-search:key"></div><span class="key-label">Answer key</span></div>
+        <p class="preview-caption">Ocean animals, hiding in plain sight. Try your own topic!</p>
+        <p class="preview-note"><svg><use href="#i-printer"/></svg>Prints on Letter paper, answer key included</p>
+        <div class="sheet-actions" hidden>
+          <button class="btn btn-primary" data-print type="button"><svg class="ic"><use href="#i-printer"/></svg>Print</button>
+          <button class="btn btn-ghost" data-download type="button"><svg class="ic"><use href="#i-download"/></svg>Download</button>
+          <button class="btn btn-ghost" data-key type="button" aria-pressed="false"><svg class="ic"><use href="#i-key"/></svg>Show answer key</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <div data-slot="app-cta"></div>
+</main>
+<script src="../assets/js/layout.js"></script>
+<script src="../creative-studio/data.js"></script>
+<script src="../creative-studio/tools.js"></script>
+</body>
+</html>
